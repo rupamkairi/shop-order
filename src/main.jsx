@@ -1,10 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import "mdb-react-ui-kit/dist/css/mdb.min.css";
+import { AppConextProvider } from "./contexts/AppContext";
+import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
+    <AppConextProvider>
+      <App />
+    </AppConextProvider>
   </React.StrictMode>
 );
